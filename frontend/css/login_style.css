@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #000713;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  width: 1000px;
+  height: 560px;
+
+  background: #fff;
+
+  display: flex;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.img-container {
+  width: 50%;
+  height: 100%;
+
+  position: relative;
+
+  border-radius: 20px 0 0 20px;
+
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
+
+.img-container::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 40, 120, 0.72);
+
+  z-index: 1;
+}
+
+/* =========================
+   UNIVERSITY LOGO
+========================= */
+
+.img-container::after {
+  content: "BHARATHIYAR\A UNIVERSITY";
+
+  white-space: pre;
+
+  position: absolute;
+
+  top: 48%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: white;
+
+  border: 2px solid rgba(255, 255, 255, 0.7);
+
+  padding: 18px 25px;
+
+  font-size: 18px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  line-height: 28px;
+
+  z-index: 2;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.img-container p {
+  position: absolute;
+
+  bottom: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: #fff;
+
+  font-size: 13px;
+
+  z-index: 2;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.log-container {
+  width: 50%;
+  height: 100%;
+
+  padding: 70px 60px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(199, 199, 200, 0.72);
+
+  border-radius: 0 20px 20px 0;
+}
+
+/* =========================
+   LOGIN HEADING
+========================= */
+
+.log-container h1 {
+  font-size: 38px;
+
+  margin-bottom: 50px;
+
+  color: #222;
+
+  text-align: left;
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.log-container input {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid #ddd;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s;
+
+  background: #fff;
+}
+
+.log-container input:focus {
+  border-color: #0d47a1;
+
+  box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.08);
+}
+
+.log-container input::placeholder {
+  color: #999;
+}
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.forgot-link {
+  display: block;
+
+  width: fit-content;
+
+  text-decoration: none;
+
+  color: #777;
+
+  font-size: 14px;
+
+  margin-top: -5px;
+
+  margin-bottom: 30px;
+
+  margin-left: auto;
+
+  transition: 0.3s;
+}
+
+.forgot-link:hover {
+  color: #0d47a1;
+
+  text-decoration: underline;
+}
+
+/* =========================
+   BUTTON CONTAINER
+========================= */
+
+.buttons {
+  width: 100%;
+
+  display: flex;
+
+  gap: 15px;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  background: #0d47a1;
+
+  color: #fff;
+
+  border: none;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #08337b;
+}
+
+.login-btn:active {
+  transform: translateY(1px);
+}
+
+.login-btn:disabled {
+  background: #78909c;
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   REGISTER SECTION
+========================= */
+
+.register-link {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 28px;
+
+  font-size: 15px;
+
+  text-align: center;
+}
+
+/* Normal text */
+
+.register-link span {
+  color: #555;
+
+  font-size: 15px;
+}
+
+/* Register Here */
+
+.register-link a {
+  text-decoration: none;
+
+  color: #0d47a1;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  margin: 0;
+
+  transition: 0.3s;
+}
+
+.register-link a:hover {
+  color: #08337b;
+
+  text-decoration: underline;
+}
+
+/* =========================
+   MESSAGE AREA
+========================= */
+
+#message {
+  margin: 10px 0;
+
+  text-align: center;
+
+  color: red;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  min-height: 20px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+  .container {
+    width: 90%;
+
+    height: auto;
+
+    min-height: 560px;
+  }
+
+  .img-container {
+    width: 45%;
+  }
+
+  .log-container {
+    width: 55%;
+
+    padding: 60px 40px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+
+    height: auto;
+
+    min-height: auto;
+
+    flex-direction: column;
+  }
+
+  .img-container {
+    width: 100%;
+
+    height: 220px;
+
+    border-radius: 20px 20px 0 0;
+  }
+
+  .log-container {
+    width: 100%;
+
+    height: auto;
+
+    padding: 40px 35px;
+
+    border-radius: 0 0 20px 20px;
+  }
+
+  .log-container h1 {
+    margin-bottom: 35px;
+
+    font-size: 32px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    border-radius: 15px;
+  }
+
+  .img-container {
+    height: 180px;
+
+    border-radius: 15px 15px 0 0;
+  }
+
+  .img-container::after {
+    font-size: 15px;
+
+    line-height: 23px;
+
+    padding: 13px 18px;
+  }
+
+  .log-container {
+    padding: 30px 22px;
+
+    border-radius: 0 0 15px 15px;
+  }
+
+  .log-container h1 {
+    font-size: 28px;
+
+    margin-bottom: 30px;
+  }
+
+  .log-container input {
+    padding: 13px;
+
+    font-size: 14px;
+  }
+
+  .forgot-link {
+    font-size: 13px;
+
+    margin-bottom: 25px;
+  }
+
+  .login-btn {
+    padding: 13px;
+
+    font-size: 16px;
+  }
+
+  .register-link {
+    margin-top: 23px;
+
+    font-size: 13px;
+  }
+
+  .register-link span,
+  .register-link a {
+    font-size: 13px;
+  }
+}
