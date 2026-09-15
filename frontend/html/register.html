@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>IDRS - Create Account</title>
+
+    <link rel="stylesheet" href="../css/register_style.css" />
+  </head>
+
+  <body>
+    <div class="register-wrapper">
+      <!-- Left branding section -->
+      <div class="branding-section">
+        <img src="../assets/University.jpg" alt="University Campus" />
+
+        <div class="branding-overlay"></div>
+
+        <div class="branding-content">
+          <div class="university-logo">
+            <span>BHARATHIYAR</span>
+            <span>UNIVERSITY</span>
+          </div>
+
+          <div class="branding-text">
+            <h2>Institutional Data</h2>
+            <h2>& Reporting System</h2>
+
+            <p>
+              Secure institutional data management, reporting and analytics
+              platform.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right registration section -->
+      <div class="registration-section">
+        <!-- Header -->
+        <div class="registration-header">
+          <div class="brand-name">
+            <span class="brand-icon">ID</span>
+
+            <div>
+              <h2>IDRS</h2>
+              <span>Institutional Data & Reporting System</span>
+            </div>
+          </div>
+
+          <h1>Create Your Account</h1>
+
+          <p class="header-description">
+            Register using your authorized institutional email to access the
+            IDRS platform.
+          </p>
+        </div>
+
+        <!-- Registration progress -->
+        <div class="progress-container">
+          <div class="progress-line"></div>
+
+          <div class="progress-step active" id="progressStep1">
+            <div class="step-circle">1</div>
+
+            <span>Verify Email</span>
+          </div>
+
+          <div class="progress-step" id="progressStep2">
+            <div class="step-circle">2</div>
+
+            <span>Details</span>
+          </div>
+
+          <div class="progress-step" id="progressStep3">
+            <div class="step-circle">3</div>
+
+            <span>OTP</span>
+          </div>
+
+          <div class="progress-step" id="progressStep4">
+            <div class="step-circle">4</div>
+
+            <span>Account</span>
+          </div>
+        </div>
+
+        <!-- Registration content -->
+        <div class="registration-content">
+          <!-- STEP 1 -->
+          <div id="step1" class="registration-step">
+            <div class="step-heading">
+              <span class="step-label">STEP 01</span>
+
+              <h3>Verify Official Email</h3>
+
+              <p>Enter the email address registered with your institution.</p>
+            </div>
+
+            <form id="verifyEmailForm">
+              <label for="officialEmail"> Official Email Address </label>
+
+              <div class="verify-section">
+                <input
+                  type="email"
+                  id="officialEmail"
+                  name="officialEmail"
+                  placeholder="Enter your official email"
+                  autocomplete="email"
+                  required
+                />
+
+                <button type="submit" class="verify-btn">Verify</button>
+              </div>
+
+              <div class="security-note">
+                <span class="security-icon">✓</span>
+
+                <span>
+                  Only authorized institutional email addresses can be
+                  registered.
+                </span>
+              </div>
+            </form>
+          </div>
+
+          <!-- STEP 2 -->
+          <div id="step2" class="registration-step" style="display: none">
+            <div class="step-heading">
+              <span class="step-label">STEP 02</span>
+
+              <h3>Confirm Your Details</h3>
+
+              <p>
+                These details are linked to your authorized institutional
+                profile.
+              </p>
+            </div>
+
+            <div class="details-card">
+              <div class="details-header">
+                <div class="profile-icon">ID</div>
+
+                <div>
+                  <span class="details-title"> Official Profile </span>
+
+                  <span class="details-subtitle">
+                    Verified institutional information
+                  </span>
+                </div>
+              </div>
+
+              <div class="details-grid">
+                <div class="detail-field">
+                  <label for="fullName">Full Name</label>
+
+                  <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Full Name"
+                    readonly
+                  />
+                </div>
+
+                <div class="detail-field">
+                  <label for="role">Role</label>
+
+                  <input type="text" id="role" placeholder="Role" readonly />
+                </div>
+
+                <div class="detail-field">
+                  <label for="collegeName">College</label>
+
+                  <input
+                    type="text"
+                    id="collegeName"
+                    placeholder="College"
+                    readonly
+                  />
+                </div>
+
+                <div class="detail-field">
+                  <label for="departmentName">Department</label>
+
+                  <input
+                    type="text"
+                    id="departmentName"
+                    placeholder="Department"
+                    readonly
+                  />
+                </div>
+
+                <div class="detail-field full-width">
+                  <label for="designation">Designation</label>
+
+                  <input
+                    type="text"
+                    id="designation"
+                    placeholder="Designation"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="verification-status">
+              <span class="status-icon">✓</span>
+
+              <div>
+                <strong>Official email verified</strong>
+
+                <span> Your institutional identity has been verified. </span>
+              </div>
+            </div>
+
+            <button type="button" id="sendOtpBtn" class="register-btn">
+              Send OTP
+            </button>
+          </div>
+
+          <!-- STEP 3 -->
+          <div id="step3" class="registration-step" style="display: none">
+            <div class="step-heading">
+              <span class="step-label">STEP 03</span>
+
+              <h3>Verify Your Email</h3>
+
+              <p id="otpMessage">
+                A six-digit verification code has been sent to your official
+                email.
+              </p>
+            </div>
+
+            <div class="otp-card">
+              <div class="otp-icon">@</div>
+
+              <h4>Enter Verification Code</h4>
+
+              <p>
+                Enter the 6-digit OTP sent to your registered email address.
+              </p>
+
+              <input
+                type="text"
+                id="otp"
+                placeholder="000000"
+                maxlength="6"
+                inputmode="numeric"
+                autocomplete="one-time-code"
+              />
+            </div>
+
+            <button type="button" id="verifyOtpBtn" class="register-btn">
+              Verify OTP
+            </button>
+
+            <button type="button" id="resendOtpBtn" class="secondary-btn">
+              Resend OTP
+            </button>
+          </div>
+
+          <!-- STEP 4 -->
+          <div id="step4" class="registration-step" style="display: none">
+            <div class="step-heading">
+              <span class="step-label">STEP 04</span>
+
+              <h3>Create Your Password</h3>
+
+              <p>Set a secure password to protect your IDRS account.</p>
+            </div>
+
+            <div class="password-card">
+              <div class="password-status">
+                <span class="status-icon">✓</span>
+
+                <div>
+                  <strong>Email verification complete</strong>
+
+                  <span> Your identity has been successfully verified. </span>
+                </div>
+              </div>
+
+              <label for="password"> Password </label>
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                required
+              />
+
+              <label for="confirmPassword"> Confirm Password </label>
+
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm your password"
+                autocomplete="new-password"
+                required
+              />
+
+              <div class="password-rule">
+                Password must contain at least 8 characters.
+              </div>
+            </div>
+
+            <button type="button" id="createAccountBtn" class="register-btn">
+              Create Account
+            </button>
+          </div>
+
+          <!-- Registration success -->
+          <div
+            id="registrationSuccess"
+            class="registration-step"
+            style="display: none"
+          >
+            <div class="success-card">
+              <div class="success-icon">✓</div>
+
+              <span class="success-label"> REGISTRATION COMPLETE </span>
+
+              <h3>Account Created Successfully</h3>
+
+              <p>
+                Your IDRS account has been created and your institutional
+                identity has been verified.
+              </p>
+
+              <a href="login.html"> Go to Login </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Registration JavaScript -->
+    <script src="../scripts/register.js"></script>
+  </body>
+</html>
