@@ -1,0 +1,808 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  background: #000713;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+/* Main wrapper */
+.register-wrapper {
+  width: 1180px;
+  height: 700px;
+  display: flex;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Left branding section */
+.branding-section {
+  width: 45%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Branding image */
+.branding-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Image overlay */
+.branding-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 67, 145, 0.72);
+}
+
+/* Branding content */
+.branding-content {
+  position: absolute;
+  inset: 0;
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+/* University logo */
+.university-logo {
+  width: fit-content;
+  padding: 14px 22px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Branding text */
+.branding-text {
+  max-width: 390px;
+}
+
+/* Branding heading */
+.branding-text h2 {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+/* Branding paragraph */
+.branding-text p {
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Registration section */
+.registration-section {
+  width: 55%;
+  height: 100%;
+  padding: 42px 55px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Registration header */
+.registration-header {
+  margin-bottom: 25px;
+}
+
+/* Brand name */
+.brand-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+/* Brand icon */
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #174ea6;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Brand heading */
+.brand-name h2 {
+  color: #172b4d;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+/* Brand subtitle */
+.brand-name span {
+  color: #7d8998;
+  font-size: 11px;
+}
+
+/* Main heading */
+.registration-header h1 {
+  color: #172b4d;
+  font-size: 31px;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+/* Header description */
+.header-description {
+  margin-top: 8px;
+  color: #7d8998;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Progress container */
+.progress-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 0 5px;
+}
+
+/* Progress line */
+.progress-line {
+  position: absolute;
+  top: 16px;
+  left: 35px;
+  right: 35px;
+  height: 2px;
+  background: #dce3ec;
+  z-index: 0;
+}
+
+/* Progress step */
+.progress-step {
+  position: relative;
+  z-index: 1;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #8a96a6;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Step circle */
+.step-circle {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #dce3ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8a96a6;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Active progress step */
+.progress-step.active {
+  color: #174ea6;
+}
+
+/* Active step circle */
+.progress-step.active .step-circle {
+  background: #174ea6;
+  border-color: #174ea6;
+  color: #ffffff;
+}
+
+/* Registration content */
+.registration-content {
+  flex: 1;
+}
+
+/* Registration step */
+.registration-step {
+  width: 100%;
+  animation: stepFade 0.25s ease;
+}
+
+/* Step animation */
+@keyframes stepFade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Step heading */
+.step-heading {
+  margin-bottom: 20px;
+}
+
+/* Step label */
+.step-label {
+  color: #174ea6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Step title */
+.step-heading h3 {
+  margin-top: 5px;
+  color: #263952;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+/* Step description */
+.step-heading p {
+  margin-top: 6px;
+  color: #7d8998;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Form */
+form {
+  width: 100%;
+}
+
+/* Input label */
+label {
+  display: block;
+  margin-bottom: 7px;
+  color: #46566c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Verify section */
+.verify-section {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+/* General input */
+input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #d7e0ea;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #263952;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+/* Input focus */
+input:focus {
+  border-color: #174ea6;
+  box-shadow: 0 0 0 3px rgba(23, 78, 166, 0.08);
+}
+
+/* Input placeholder */
+input::placeholder {
+  color: #a2adba;
+}
+
+/* Verify input */
+.verify-section input {
+  flex: 1;
+}
+
+/* Verify button */
+.verify-btn {
+  width: 105px;
+  height: 46px;
+  border: none;
+  border-radius: 7px;
+  background: #174ea6;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Verify button hover */
+.verify-btn:hover {
+  background: #123f87;
+}
+
+/* Verify button disabled */
+.verify-btn:disabled {
+  background: #8a96a6;
+  cursor: not-allowed;
+}
+
+/* Security note */
+.security-note {
+  margin-top: 14px;
+  padding: 11px 13px;
+  border: 1px solid #dfe7f0;
+  border-radius: 7px;
+  background: #f7f9fc;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #718096;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Security icon */
+.security-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e8f0fc;
+  color: #174ea6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Details card */
+.details-card {
+  padding: 17px;
+  border: 1px solid #dfe6ee;
+  border-radius: 9px;
+  background: #fbfcfe;
+}
+
+/* Details header */
+.details-header {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-bottom: 14px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e5e9ef;
+}
+
+/* Profile icon */
+.profile-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #eaf1fc;
+  color: #174ea6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Details title */
+.details-title {
+  display: block;
+  color: #33445b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Details subtitle */
+.details-subtitle {
+  display: block;
+  margin-top: 2px;
+  color: #8994a3;
+  font-size: 11px;
+}
+
+/* Details grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+/* Detail field */
+.detail-field {
+  min-width: 0;
+}
+
+/* Detail input */
+.detail-field input {
+  height: 41px;
+  background: #f2f5f8;
+  color: #536176;
+  cursor: default;
+  font-size: 13px;
+}
+
+/* Full width detail field */
+.detail-field.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Verification status */
+.verification-status {
+  margin-top: 13px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: #f1f8f4;
+  border: 1px solid #d9eee1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Status icon */
+.status-icon {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #2f855a;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Verification strong text */
+.verification-status strong {
+  display: block;
+  color: #276749;
+  font-size: 12px;
+}
+
+/* Verification secondary text */
+.verification-status span:not(.status-icon) {
+  display: block;
+  margin-top: 2px;
+  color: #6b7f72;
+  font-size: 11px;
+}
+
+/* Primary button */
+.register-btn {
+  width: 100%;
+  height: 47px;
+  margin-top: 17px;
+  border: none;
+  border-radius: 7px;
+  background: #174ea6;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Primary button hover */
+.register-btn:hover {
+  background: #123f87;
+}
+
+/* Primary button disabled */
+.register-btn:disabled {
+  background: #8a96a6;
+  cursor: not-allowed;
+}
+
+/* OTP card */
+.otp-card {
+  padding: 22px;
+  border: 1px solid #dfe6ee;
+  border-radius: 9px;
+  background: #fbfcfe;
+  text-align: center;
+}
+
+/* OTP icon */
+.otp-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 11px;
+  border-radius: 50%;
+  background: #eaf1fc;
+  color: #174ea6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* OTP heading */
+.otp-card h4 {
+  color: #33445b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* OTP description */
+.otp-card p {
+  max-width: 390px;
+  margin: 7px auto 16px;
+  color: #8792a0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* OTP input */
+#otp {
+  width: 210px;
+  height: 50px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 8px;
+  color: #17365f;
+}
+
+/* OTP placeholder */
+#otp::placeholder {
+  letter-spacing: 3px;
+  color: #b0b8c4;
+  font-size: 17px;
+}
+
+/* Secondary button */
+.secondary-btn {
+  width: 100%;
+  height: 42px;
+  margin-top: 9px;
+  border: 1px solid #cbd7e6;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #52647c;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Secondary button hover */
+.secondary-btn:hover {
+  background: #f5f8fc;
+  border-color: #174ea6;
+  color: #174ea6;
+}
+
+/* Password card */
+.password-card {
+  padding: 18px;
+  border: 1px solid #dfe6ee;
+  border-radius: 9px;
+  background: #fbfcfe;
+}
+
+/* Password status */
+.password-status {
+  margin-bottom: 17px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: #f1f8f4;
+  border: 1px solid #d9eee1;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+/* Password status strong */
+.password-status strong {
+  display: block;
+  color: #276749;
+  font-size: 12px;
+}
+
+/* Password status text */
+.password-status span:not(.status-icon) {
+  display: block;
+  margin-top: 2px;
+  color: #6b7f72;
+  font-size: 11px;
+}
+
+/* Password inputs */
+.password-card input {
+  margin-bottom: 13px;
+}
+
+/* Password rule */
+.password-rule {
+  color: #8994a3;
+  font-size: 11px;
+}
+
+/* Success card */
+.success-card {
+  padding: 38px 30px;
+  border: 1px solid #dce5ef;
+  border-radius: 10px;
+  background: #fbfcfe;
+  text-align: center;
+}
+
+/* Success icon */
+.success-icon {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 17px;
+  border-radius: 50%;
+  background: #e8f6ee;
+  color: #2f855a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+/* Success label */
+.success-label {
+  color: #2f855a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Success heading */
+.success-card h3 {
+  margin-top: 7px;
+  color: #263952;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Success paragraph */
+.success-card p {
+  max-width: 420px;
+  margin: 10px auto 22px;
+  color: #7d8998;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Login button */
+.success-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  height: 43px;
+  padding: 0 22px;
+  border-radius: 7px;
+  background: #174ea6;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+/* Login button hover */
+.success-card a:hover {
+  background: #123f87;
+}
+
+/* Tablet layout */
+@media (max-width: 1000px) {
+  body {
+    padding: 20px;
+  }
+
+  .register-wrapper {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    min-height: 680px;
+  }
+
+  .branding-section {
+    display: none;
+  }
+
+  .registration-section {
+    width: 100%;
+    min-height: 680px;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+    background: #ffffff;
+    align-items: flex-start;
+  }
+
+  .register-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .registration-section {
+    min-height: 100vh;
+    padding: 30px 22px;
+  }
+
+  .registration-header h1 {
+    font-size: 27px;
+  }
+
+  .progress-container {
+    margin-bottom: 27px;
+  }
+
+  .progress-step {
+    font-size: 9px;
+  }
+
+  .progress-line {
+    left: 25px;
+    right: 25px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-field.full-width {
+    grid-column: auto;
+  }
+
+  .verify-section {
+    flex-direction: column;
+  }
+
+  .verify-btn {
+    width: 100%;
+  }
+
+  #otp {
+    width: 100%;
+  }
+
+  .success-card {
+    padding: 35px 20px;
+  }
+}
